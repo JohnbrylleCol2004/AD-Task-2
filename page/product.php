@@ -10,25 +10,25 @@
     [
         'name' => 'Nike Zoom 1',
         'price' => 120.99,
-        'image' => 'air-runner.jpg',
+        'image' => 'nike-zoom.jpg',
         'category' => 'running'
     ],
     [
         'name' => 'Off White',
         'price' => 89.99,
-        'image'=> 'classic-white.jpg',
+        'image'=> 'classic.jpg',
         'category' => 'formal'
     ],
     [
         'name' => 'Black Classics',
         'price' => 149.99,
-        'image' => 'black-class.jpg',
+        'image' => 'black-classic.jpg',
         'category'=> 'formal'
     ],
     [
         'name'=> 'LeBron 20',
         'price'=> 129.99,
-        'image' => 'basketball-pro.jpg',
+        'image' => 'lebron.jpg',
         'category' => 'sports'
     ]
 

@@ -11,8 +11,8 @@
         <h1>Style Shoe Store</h1>
         <nav>
             <ul>
-                <li><a href="./page/index.php"></a></li>
-                <li><a href="./page/product.php"></a></li>
+                <li><a href="../page/index.php">Home</a></li>
+                <li><a href="../page/product.php">Products</a></li>
             </ul>
         </nav>
     </header>
