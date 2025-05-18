@@ -7,13 +7,12 @@ $shoeCategories = [
 ];
 
 function displayCategories($categories) {
-    echo "<ul class='categories'>";
+    echo "<div class='categories-list'>";
     foreach ($categories as $key => $value) {
-        echo "<li><a href='products.php?category=$key'>$value</a></li>";
+        echo "<a href='#' class='category-link' data-category='$key'>$value</a>";
     }
-    echo "</ul>";
+    echo "</div>";
 }
-
 $featuredShoes = [
     [
         'name' => 'Nike Zoom 1',
@@ -24,7 +23,7 @@ $featuredShoes = [
     [
         'name' => 'Off White',
         'price' => 89.99,
-        'image'=> 'classic.jpg',
+        'image'=> 'off-white.jpg',
         'category'=> 'sneakers'
     ],
     [
@@ -38,6 +37,12 @@ $featuredShoes = [
         'price' => 199.99,
         'image' => 'lebron.jpg',
         'category' => 'sports'
+    ],
+    [
+        'name' => 'Converse Chuck 70',
+        'price' => 75.00,
+        'image' => 'chuck.jpg',
+        'category' => 'sneakers'
     ]
 ];
 
@@ -67,9 +72,5 @@ require_once '../components/header.component.php';
     <?php displayShoes($featuredShoes); ?>
 </section>
 
-<section class="categories">
-    <h2>Shop By Category</h2>
-    <?php displayCategories($shoeCategories); ?>
-</section>
 
 <?php include '../components/footer.component.php'; ?>

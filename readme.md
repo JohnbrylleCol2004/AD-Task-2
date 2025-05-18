@@ -147,7 +147,5 @@ AD-ProjectName
 
 | Title        | Purpose                                                                       | Link          |
 | ------------ | ----------------------------------------------------------------------------- | ------------- |
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| W3schools | This is where I get some of the code I've done to complete the website. |  https://www.w3schools.com/|
+| Pinterest | This is where I get some of the photos I've used to represent the shoes the website. | https://ph.pinterest.com/ |

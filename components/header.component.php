@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Style Shoe Store</h1>
+        <h1>SHS</h1>
         <nav>
             <ul>
                 <li><a href="../page/index.php">Home</a></li>

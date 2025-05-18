@@ -7,13 +7,13 @@ $shoeCategories = [
 ];
 
 function displayCategories($categories) {
-    echo "<ul class='categories'>";
+    echo "<div class='categories-list'>";
     foreach ($categories as $key => $value) {
-        echo "<li><a href='products.php?category=$key'>$value</a></li>";
+        // Changed to use JavaScript click handler
+        echo "<a href='#' class='category-link' data-category='$key'>$value</a>";
     }
-    echo "</ul>";
+    echo "</div>";
 }
-
 $featuredShoes = [
     [
         'name' => 'Nike Pegasus 41',
@@ -24,7 +24,7 @@ $featuredShoes = [
     [
         'name' => 'Off White',
         'price' => 89.99,
-        'image'=> 'classic.jpg',
+        'image'=> 'off-white.jpg',
         'category'=> 'sneakers'
     ],
     [
@@ -38,6 +38,12 @@ $featuredShoes = [
         'price' => 199.00,
         'image'=> 'lebron.jpg',
         'category'=> 'sports'
+    ],
+    [
+        'name' => 'Converse Chuck 70',
+        'price' => 75.00,
+        'image' => 'chuck.jpg',
+        'category' => 'sneakers'
     ]
 ];
 
@@ -62,14 +68,10 @@ require_once __DIR__ . '../components/header.component.php';
 </section>
 </div>
 
-<section class="featured">
-    <h2>Featured Shoes</h2>
-    <?php displayShoes($featuredShoes); ?>
-</section>
-
 <section class="categories">
     <h2>Shop By Category</h2>
     <?php displayCategories($shoeCategories); ?>
 </section>
+
 
 <?php include __DIR__ . '../components/footer.component.php'; ?>

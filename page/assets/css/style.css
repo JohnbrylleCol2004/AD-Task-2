@@ -99,21 +99,31 @@ nav a{
     padding: 1rem;
 }
 
-.categories ul{
-    list-style: none;
+.categories-list{
     display: flex;
-    gap: 1rem;
-    padding: 0;
-    display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
-.categories a{
-    text-decoration: none;
+.category-link{
+    display: inline-block;
+    padding: 10px 25px;
+    background: #f1f1f1;
     color: #333;
-    background: #f4f4f4;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.category-link:hover{
+    background: #333;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
