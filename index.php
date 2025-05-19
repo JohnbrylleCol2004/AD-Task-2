@@ -9,14 +9,13 @@ $shoeCategories = [
 function displayCategories($categories) {
     echo "<div class='categories-list'>";
     foreach ($categories as $key => $value) {
-        // Changed to use JavaScript click handler
         echo "<a href='#' class='category-link' data-category='$key'>$value</a>";
     }
     echo "</div>";
 }
 $featuredShoes = [
     [
-        'name' => 'Nike Pegasus 41',
+        'name' => 'Nike Zoom 1',
         'price' => 120.99,
         'image' => 'nike-zoom.jpg',
         'category' => 'running'
@@ -35,9 +34,9 @@ $featuredShoes = [
     ],
     [
         'name' => 'LeBron 20',
-        'price' => 199.00,
-        'image'=> 'lebron.jpg',
-        'category'=> 'sports'
+        'price' => 199.99,
+        'image' => 'lebron.jpg',
+        'category' => 'sports'
     ],
     [
         'name' => 'Converse Chuck 70',
@@ -68,9 +67,9 @@ require_once __DIR__ . '../components/header.component.php';
 </section>
 </div>
 
-<section class="categories">
-    <h2>Shop By Category</h2>
-    <?php displayCategories($shoeCategories); ?>
+<section class="featured">
+    <h2>Featured Shoes</h2>
+    <?php displayShoes($featuredShoes); ?>
 </section>
 
 
