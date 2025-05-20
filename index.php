@@ -1,76 +1,38 @@
-<?php 
-$shoeCategories = [
-    'running' => 'Running Shoes',
-    'sneakers' => 'Casual Sneakers',
-    'formal' => 'Formal Shoes',
-    'sports' => 'Sports Shoes'
-];
+<?php
+include 'components/header.component.php';
+require_once __DIR__ . '../handlers/categories.handler.php';
+require_once __DIR__ . '../handlers/products.handler.php';
+require_once __DIR__ . '../handlers/display.handler.php';
 
-function displayCategories($categories) {
-    echo "<div class='categories-list'>";
-    foreach ($categories as $key => $value) {
-        echo "<a href='#' class='category-link' data-category='$key'>$value</a>";
-    }
-    echo "</div>";
-}
-$featuredShoes = [
-    [
-        'name' => 'Nike Zoom 1',
-        'price' => 120.99,
-        'image' => 'nike-zoom.jpg',
-        'category' => 'running'
-    ],
-    [
-        'name' => 'Off White',
-        'price' => 89.99,
-        'image'=> 'off-white.jpg',
-        'category'=> 'sneakers'
-    ],
-    [
-        'name' => 'Black Classics',
-        'price' => 149.99,
-        'image' => 'black-classic.jpg',
-        'category' => 'formal'
-    ],
-    [
-        'name' => 'LeBron 20',
-        'price' => 199.99,
-        'image' => 'lebron.jpg',
-        'category' => 'sports'
-    ],
-    [
-        'name' => 'Converse Chuck 70',
-        'price' => 75.00,
-        'image' => 'chuck.jpg',
-        'category' => 'sneakers'
-    ]
-];
 
-function displayShoes($shoes) {
-    echo "<div class='shoe-grid'>";
-    foreach($shoes as $shoe){
-        echo "<div class='shoe-card'>";
-        echo "<img src='./assets/img/{$shoe['image']}' alt='{$shoe['name']}'>";
-        echo "<h3>{$shoe['name']}</h3>";
-        echo "<p>\${$shoe['price']}</p>";
-        echo "</div>";
-    }
-    echo "</div>";
-}
-
-require_once __DIR__ . '../components/header.component.php';
+$categories = getCategories();
+$featuredProducts = array_slice(getProducts(), 0, 3); 
 ?>
-<div class="hero-container">
+
+
 <section class="hero">
-    <h2>Welcome to Style Shoe Store</h2>
-    <p>Find your perfect shoe!</p>
+    <div class="hero-content">
+        <h1>Welcome to Style Shoe Store</h1>
+        <p>Discover your perfect pair</p>
+        <a href=".page/product.php" class="cta-button">Shop Now</a>
+    </div>
 </section>
-</div>
+
 
 <section class="featured">
     <h2>Featured Shoes</h2>
-    <?php displayShoes($featuredShoes); ?>
+    <?php echo renderProducts($featuredProducts); ?>
+    <div class="view-all">
+        <a href="./page/product.php" class="cta-button">View All Products</a>
+    </div>
 </section>
 
+
+<section class="category-preview">
+    <h2>Shop By Category</h2>
+    <?php echo renderCategoryLinks($categories); ?>
+</section>
+
+<script src="./assets/js/script.js"></script>
 
 <?php include __DIR__ . '../components/footer.component.php'; ?>
