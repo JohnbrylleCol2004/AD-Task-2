@@ -27,11 +27,6 @@ $featuredProducts = array_slice(getProducts(), 0, 3);
 </section>
 
 
-<section class="category-preview">
-    <h2>Shop By Category</h2>
-    <?php echo renderCategoryLinks($categories); ?>
-</section>
-
 <script src="../assets/js/script.js"></script>
 
 <?php include '../components/footer.component.php'; ?>

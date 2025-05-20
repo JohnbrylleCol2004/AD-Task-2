@@ -34,12 +34,11 @@
   ];
 }
 
-function filterProductByCategory($products, $category) {
-    if($category === 'all') return $products;
-
+function filterProductsByCategory($products, $category) {
+    if ($category === 'all') return $products;
+    
     return array_filter($products, function($product) use ($category) {
         return $product['category'] === $category;
     });
 }
-
 ?>
