@@ -14,7 +14,7 @@ $featuredProducts = array_slice(getProducts(), 0, 3);
     <div class="hero-content">
         <h1>Welcome to Style Shoe Store</h1>
         <p>Discover your perfect pair</p>
-        <a href=".page/product.php" class="cta-button">Shop Now</a>
+        <a href="../page/product.php" class="cta-button">Shop Now</a>
     </div>
 </section>
 
@@ -23,7 +23,7 @@ $featuredProducts = array_slice(getProducts(), 0, 3);
     <h2>Featured Shoes</h2>
     <?php echo renderProducts($featuredProducts); ?>
     <div class="view-all">
-        <a href="./page/product.php" class="cta-button">View All Products</a>
+        <a href="../page/product.php" class = "cta-button" >View All Products</a>
     </div>
 </section>
 
