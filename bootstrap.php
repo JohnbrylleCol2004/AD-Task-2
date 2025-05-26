@@ -1,4 +1,4 @@
 <?php
-define('BASE_PATH', realpath(_DIR_));
+define('BASE_PATH', realpath(__DIR__));
 
 chdir(BASE_PATH);
